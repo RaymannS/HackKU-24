@@ -38,7 +38,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData) {
 
     // Open the popup.html in a new window
     chrome.windows.create({
-        url: chrome.runtime.getURL("translation.html"),
+        url: chrome.runtime.getURL("translate.html"),
         type: "popup",
         width: 300, // Set width as needed
         height: 200, // Set height as needed
