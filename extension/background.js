@@ -2,6 +2,7 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "translateText") {
       const textToTranslate = message.text;
+      console.log("Text to translate:", textToTranslate);
       const apiKey = "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";
   
       fetch(`https://api.openai.com/v1/engines/text-davinci-003/completions`, {
@@ -30,11 +31,13 @@ chrome.contextMenus.create({
     "contexts": ["selection"],
 });
 
-chrome.conextMenus.onClicked.addListener(function(clickData){
-    console.log("click")
-    if(clickData.menuItemId == "translateSlang"){
-        chrome.storage.local.set({ 'translatedText': "TESTTT"});
-        chrome.runtime.sendMessage({todo:"translateText"})
-        console.log("pepepeee")
-    }
+chrome.contextMenus.onClicked.addListener(function(clickData) {
+  console.log("yiippee?");
+  if (clickData.menuItemId === "translateSlang" && clickData.selectionText) {
+      // Send a message to content script to translate the selected text
+      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+          chrome.tabs.sendMessage(tabs[0].id, { action: "translateText", text: clickData.selectionText });
+      });
+  }
 });
+
