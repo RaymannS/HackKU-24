@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const popupContent = document.getElementById('popupContent');
         const transContent = document.getElementById('translation');
         popupContent.textContent = selectedText;
-        transContent.textContent = poopeeteer(selectedText);
+        transContent.textContent = runPoopeeteer(selectedText);
         
         // Optionally, you can perform translation logic here
         // Example: Call translateText function to translate selectedText
@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function runPoopeeteer(){
 
-// function for pupeeteer
-function poopeeteer(inputText){
-    return "okie"
+    
 }
