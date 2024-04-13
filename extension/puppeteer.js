@@ -39,4 +39,3 @@ async function runPupetteer(textInput){
         await browser.close();
     };
 
-    module.exports = runPupetteer;
