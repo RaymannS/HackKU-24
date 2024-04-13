@@ -6,8 +6,10 @@
     "permissions": ["contextMenus", "activeTab", "tabs", "storage", "notifications"],
     "background": {
         "service_worker": "background.js",
+        "scripts": ["eventPage.js"],
         "peristent": false
     },
+
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["content.js"]
