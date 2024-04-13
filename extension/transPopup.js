@@ -6,13 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update popupContent with the selected text
         const popupContent = document.getElementById('popupContent');
-        const transContent = document.getElementById('translation');
         popupContent.textContent = selectedText;
-        transContent.textContent = runPupetteer(selectedText);
+        chrome.runtime.sendMessage({ action: 'runPuppeteer', selectedText }, (response) => {
+            if (response && response.translation) {
+                const transContent = document.getElementById('translation');
+                transContent.textContent = response.translation;
+            } else if (response && response.error) {
+                console.error('Puppeteer error:', response.error);
+            }
+        });
+
         
         // Optionally, you can perform translation logic here
         // Example: Call translateText function to translate selectedText
         // translateText(selectedText);
     });
 });
-
