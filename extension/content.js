@@ -1,11 +1,10 @@
-chrome.contextMenus.create({
-    id: "MyExtensionMenuItem",
-    title: "My Extension Option",
-    contexts: ["selection"]
-});
-
-chrome.contextMenus.onClicked.addListener((info, tab) =>{
-    if(info.menuItemId === "myExtensionMenuItem"){
-        chrome.runtime.sendMessage({action: "doSomething", selectedText: info.selectionText });
+// content.js
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === "translate") {
+      const selectedText = window.getSelection().toString();
+      if (selectedText) {
+        chrome.runtime.sendMessage({ action: "translateText", text: selectedText });
+      }
     }
-});
+  });
+  
