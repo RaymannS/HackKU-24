@@ -4,14 +4,20 @@
     "version": "1.0",
     "description": "Translate American slang, idioms, and emojis",
     "permissions": ["contextMenus", "activeTab", "tabs", "storage", "notifications"],
+    "icons":{
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
     "background": {
         "service_worker": "background.js",
         "peristent": false
     },
-    
+
     "options_page": "options.html",
     
     "browser_action": {
+        "default_icon": "icon16.png",
         "default_popup": "popup.html"
     }
 }
