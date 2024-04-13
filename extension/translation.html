@@ -5,20 +5,32 @@
     <style>
         body {
             margin: 0;
-            padding: 10px;
+            padding: 10px; /* Add padding for content */
             font-family: Arial, sans-serif;
             font-size: 14px;
-            background-color: #fff;
+            background-color: #00d8fe;
             color: #333;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
+            border-radius: 0px;
+            /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
         }
     </style>
 </head>
 <body>
-    <div id="popupContent">
-        <!-- Content will be dynamically filled by transPopup.js -->
-    </div>
-    <script src="transPopup.js"></script>
+  <!--Change to "Blank" usually means "hit the hay..."-->
+  <div>
+    <p>Text to be translated:</p>
+  </div>
+  <div id="popupContent">
+      <!-- Content will be dynamically filled by transPopup.js -->
+  </div>
+  <div>
+    <p>
+      Translated Text:
+    </p>
+  </div>
+  <div id="translation">
+    <!-- Content should be filled by transPopup.js? plz-->
+  </div>
+  <script src="transPopup.js"></script>
 </body>
 </html>
