@@ -30,3 +30,8 @@ chrome.contextMenus.create({
     "contexts": ["selection"],
 });
 
+chrome.conextMenus.onClicked.addListener(function(clickData){
+    if(clickData.menuItemId == "translateSlang" && clickData.selectionText){
+        
+    }
+});
