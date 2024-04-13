@@ -32,6 +32,7 @@ chrome.contextMenus.create({
 
 chrome.conextMenus.onClicked.addListener(function(clickData){
     if(clickData.menuItemId == "translateSlang" && clickData.selectionText){
-        
+        chrome.runtime.sendMessage({todo:"translateText"})
+        console.log("RAMY RAMYMYMY")
     }
 });
