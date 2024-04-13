@@ -35,7 +35,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData) {
   if (clickData.menuItemId === "translateSlang" && clickData.selectionText) {
     // Open a new browser window (popup) when context menu item is clicked
     chrome.windows.create({
-        url: chrome.runtime.getURL("popup.html"),
+        url: chrome.runtime.getURL("translation.html"),
         type: "popup",
         width: 300, // Adjust the width and height as needed
         height: 200,
