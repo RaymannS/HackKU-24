@@ -24,11 +24,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 });
 
-var contextMenuItem = {
+chrome.contextMenus.create({
     "id": "translateSlang",
     "title": "You selected \"%s\"",
-    "contexts": ["selection"]
-};
-chrome.contextMenus.create(contextMenuitem);
-
+    "contexts": ["selection"],
+});
 
