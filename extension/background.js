@@ -10,8 +10,8 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       chrome.windows.create({
           type: "popup",
           url: "translation.html",
-          width: 300,
-          height: 200
+          width: 450,
+          height: 250
       });
   }
 });
