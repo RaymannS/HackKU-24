@@ -32,12 +32,15 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.onClicked.addListener(function(clickData) {
-  console.log("yiippee?");
   if (clickData.menuItemId === "translateSlang" && clickData.selectionText) {
-      // Send a message to content script to translate the selected text
-      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-          chrome.tabs.sendMessage(tabs[0].id, { action: "translateText", text: clickData.selectionText });
-      });
-  }
+    // Open a new browser window (popup) when context menu item is clicked
+    chrome.windows.create({
+        url: chrome.runtime.getURL("popup.html"),
+        type: "popup",
+        width: 300, // Adjust the width and height as needed
+        height: 200,
+        focused: true
+    });
+}
 });
 
