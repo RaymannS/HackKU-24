@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // content.js
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "translate") {
@@ -9,5 +8,3 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
   });
   
-=======
->>>>>>> 2a6f9cebfcced159bcc37cf53f8e6b572e39360d
