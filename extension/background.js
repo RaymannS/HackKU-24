@@ -3,3 +3,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) =>{
         console.log("Selected text:", message.selectedText)
     }
 });
+
+var contextMenuItem = {
+    "id": "translateSlang",
+    "title": "Translate Slang",
+    "contexts": ["selection"]
+};
+chrome.contextMenus.create(contextMenuitem);
