@@ -21,10 +21,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         chrome.storage.local.set({ translatedText }); // Store translated text in local storage
       });
     }
-<<<<<<< HEAD
-  });
-  
-=======
 });
 
 var contextMenuItem = {
@@ -33,4 +29,3 @@ var contextMenuItem = {
     "contexts": ["selection"]
 };
 chrome.contextMenus.create(contextMenuitem);
->>>>>>> b2bb944218b4345aaff6846c5d0bc6630485655d
