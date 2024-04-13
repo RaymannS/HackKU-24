@@ -1,14 +1,18 @@
 {
     "manifest_version": 2,
-    "name": "My extension",
+    "name": "American Translator",
     "version": "1.0",
-    "permissions": ["contextMenus", "activeTab"],
+    "description": "Translate American slang, idioms, and emojis",
+    "permissions": ["contextMenus", "activeTab", "tabs"],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "background.js",
+        "persistent": false
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["content.js"]
-    }]
-
+    }], 
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
 }
