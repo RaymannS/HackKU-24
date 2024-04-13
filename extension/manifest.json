@@ -5,8 +5,7 @@
     "description": "Translate American slang, idioms, and emojis",
     "permissions": ["contextMenus", "activeTab", "tabs"],
     "background": {
-        "service_worker": "background.js",
-        "persistent": false
+        "service_worker": "background.js"
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
