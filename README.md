@@ -7,13 +7,11 @@ American Translator
 
 ***
 
-American Translator is a lightweight extension for Chromium. It translates American idioms, slang, and emojis into easily understandable language, and instantly solves the issue of having trouble with understanding these types of phrases for English-learners. 
+American Translator is a lightweight extension for Chromium. It translates American idioms, slang, and emojis 😃 into easily understandable language, and instantly solves the issue of having trouble with understanding these types of phrases for English-learners. 
 
 ***
 
 ## Documentation
-
-***
 
 For instructions, click the extension's icon in the top right of the browser bar and click on the American Translator. 
 
@@ -21,13 +19,7 @@ To translate American slang or idioms, highlight any webpage text and then click
 > [!NOTE]
 > Note that during large ChatGPT traffic hours this extension might take longer to load the translation.
 
-***
-
 ## Installation
-
-#### Chromium
-
-***
 
 > [!NOTE]
 > This browser extension is only compatabile with Chromium based browsers with the Chrome Extension Store.
@@ -41,8 +33,6 @@ To translate American slang or idioms, highlight any webpage text and then click
 4. Now you can drag and drop the extracted *American Translator* folder into the Extensions page.
 
 5. Finally, the extension should automatically be turned on, but if it isn't then you can click the enable in the bottom right of the American Translator extension box.
-
-***
 
 ## About
 
