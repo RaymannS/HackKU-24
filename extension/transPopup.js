@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popupContent.textContent = selectedText;
         // POST to localhost server to run puppeteer on selectedText
         try {
-            const response = await fetch('http://localhost:3000/translate', {
+            const response = await fetch('http://10.104.11.197:3000/translate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
