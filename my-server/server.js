@@ -30,7 +30,8 @@ async function runPuppeteer(textInput) {
     await page.goto("https://chat.openai.com/");
     await page.waitForSelector('#prompt-textarea');
 
-    const input = `Very concisely, tell me only what ${textInput} means`;
+    // Make this more precise
+    const input = `Concisely, only say what \'${textInput}\' means (nothing else); it relates to American slang, idioms, or emojis`;
     await page.type('#prompt-textarea', input);
     await page.keyboard.press('Enter');
 

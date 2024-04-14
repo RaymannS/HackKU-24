@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const popupContent = document.getElementById('popupContent');
         popupContent.textContent = selectedText;
         try {
-            const response = await fetch('http://localhost:3000/translate', {
+            const response = await fetch('http://192.168.56.1:3000/translate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
