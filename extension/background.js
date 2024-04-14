@@ -5,7 +5,7 @@
 // background.js
 chrome.contextMenus.create({
     id: "translateText",
-    title: "Translate with ChatGPT",
+    title: "Translate Slang",
     contexts: ["selection"]
 });
 
