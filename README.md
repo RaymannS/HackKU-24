@@ -2,7 +2,9 @@
 <sub>
 <img src="https://github.com/RaymannS/HackKU-24/blob/main/American Translator/icon128.png" height="40" width="40">
 </sub>
-American Translator
+```{=latex}
+\textcolor{red}{American} \textcolor{blue}{Translator}
+```
 </h1>
 
 ***
