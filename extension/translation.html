@@ -3,32 +3,47 @@
 <head>
     <title>Slang Translator</title>
     <style>
+       html {
+        margin: 0; height: 100%; overflow: hidden
+      }
         body {
+            text-align: center;
             margin: 0;
             padding: 10px; /* Add padding for content */
             font-family: Arial, sans-serif;
             font-size: 14px;
-            background-color: #00d8fe;
             color: #333;
             border-radius: 0px;
             /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
         }
+        .translated{
+          background-color: #e52b2b;
+        }
+        header{
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+
     </style>
 </head>
+
+<img src="icon48.png"/>
+<header>
+  <a>Slang Translation</a>
+</header>
 <body>
   <!--Change to "Blank" usually means "hit the hay..."-->
   <div>
-    <p>Text to be translated:</p>
   </div>
-  <div id="popupContent">
+  <div id="popupContent" class = "original">
       <!-- Content will be dynamically filled by transPopup.js -->
   </div>
-  <div>
+  <div class>
     <p>
-      Translated Text:
+      In simpler terms means...
     </p>
   </div>
-  <div id="translation">
+  <div id="translation" class = "translated">
     <!-- Content should be filled by transPopup.js? plz-->
   </div>
   <script src="transPopup.js"></script>
