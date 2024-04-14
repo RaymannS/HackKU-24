@@ -1,9 +1,7 @@
 <table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td><a href="https://github.com/RaymannS/HackKU-24/releases/download/v1.0.0/American.Translator.zip"><img src="https://github.com/RaymannS/HackKU-24/blob/main/American Translator/icon128.png" height="60" width="60"></a></td>
-  </tr>
-  <tr>
-    <td rowspan"3"><a align="center">American Translator</a></td>
+    <td><a align="center">American Translator</a></td>
   </tr>
 </table>
 
