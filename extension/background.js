@@ -2,7 +2,7 @@
 // Creates a context menu whenever you select text and right click it
 chrome.contextMenus.create({
     id: "translateText",
-    title: "Translate Slang",
+    title: "Translate Slang or Idiom",
     contexts: ["selection"]
 });
 
