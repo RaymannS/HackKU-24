@@ -33,7 +33,8 @@ async function runPuppeteer(textInput) {
 
     // This input can be changed to the input prompt
     const input = `Concisely, only say what \'${textInput}\' means (nothing else); it relates to American slang, idioms, or emojis`;
-    await page.type('#prompt-textarea', input);
+    page.click('#prompt-textarea');
+    page.keyboard.sendCharacter(input);
     await page.keyboard.press('Enter');
 
     await page.waitForSelector('.rounded-md');
