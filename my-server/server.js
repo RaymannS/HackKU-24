@@ -32,13 +32,13 @@ async function runPuppeteer(textInput) {
     await page.waitForSelector('#prompt-textarea');
 
     // This input can be changed to the input prompt
-    const input = `Concisely, only say what \'${textInput}\' means (nothing else); it relates to American slang, idioms, or emojis`;
+    const input = `What does \'${textInput}\' mean regarding american slang, idioms, and pop culture? Please respond shortly and concicely with as few words as possible`;
+
     page.click('#prompt-textarea');
     page.keyboard.sendCharacter(input);
     await page.keyboard.press('Enter');
 
     await page.waitForSelector('.rounded-md');
-    await new Promise(r => setTimeout(r, 1000));
 
     const messageOutput = await page.evaluate(() => {
         const elements = document.querySelectorAll('.markdown');
