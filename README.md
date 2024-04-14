@@ -3,10 +3,10 @@
     <td><a href="https://github.com/RaymannS/HackKU-24/releases/download/v1.0.0/American.Translator.zip"><img src="https://github.com/RaymannS/HackKU-24/blob/main/American Translator/icon128.png" height="60" width="60"></a></td>
   </tr>
   <tr>
-    <td rowspan"2"><sub><h1 align="center">American Translator</h1></sub></td>
+    <td rowspan"3"><a align="center">American Translator</a></td>
   </tr>
 </table>
----
+
 ***
 
 American Translator is a lightweight extension for Chromium. It translates American idioms, slang, and emojis 😃 into easily understandable language, and instantly solves the issue of having trouble with understanding these types of phrases for English-learners. 
