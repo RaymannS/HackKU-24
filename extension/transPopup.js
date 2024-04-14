@@ -1,24 +1,29 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Retrieve selected text from background page using chrome.storage
-    chrome.storage.local.get(['selectedText'], (result) => {
+    chrome.storage.local.get(['selectedText'], async (result) => {
         const selectedText = result.selectedText || 'No text selected';
-
-        // Update popupContent with the selected text
         const popupContent = document.getElementById('popupContent');
         popupContent.textContent = selectedText;
-        chrome.runtime.sendMessage({ action: 'runPuppeteer', selectedText }, (response) => {
-            if (response && response.translation) {
-                const transContent = document.getElementById('translation');
-                transContent.textContent = response.translation;
-            } else if (response && response.error) {
-                console.error('Puppeteer error:', response.error);
-            }
-        });
+        try {
+            const response = await fetch('http://localhost:3000/translate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ selectedText })
+            });
 
-        
-        // Optionally, you can perform translation logic here
-        // Example: Call translateText function to translate selectedText
-        // translateText(selectedText);
+            if (response.ok) {
+                const data = await response.json();
+                const translatedText = data.translatedText;
+
+                const transContent = document.getElementById('translation');
+                transContent.textContent = translatedText;
+            } else {
+                console.error('Translation request failed');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            transContent.textContent = error;
+        }
     });
 });
