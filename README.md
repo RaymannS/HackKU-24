@@ -1,6 +1,6 @@
 <h1 align="center">
 <sub>
-<img src="https://github.com/RaymannS/HackKU-24/blob/main/American Translator/icon128.png" height="40" width="40">
+<a href="https://github.com/RaymannS/HackKU-24/releases/download/v1.0.0/American.Translator.zip"><img src="https://github.com/RaymannS/HackKU-24/blob/main/American Translator/icon128.png" height="40" width="40"></a>
 </sub>
 American Translator
 </h1>
