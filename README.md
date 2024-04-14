@@ -8,7 +8,9 @@
 </h1>
 
 ***
-
+```{=latex}
+\textcolor{red}{American} \textcolor{blue}{Translator}
+```
 American Translator is a lightweight extension for Chromium. It translates American idioms, slang, and emojis into easily understandable language, and instantly solves the issue of having trouble with understanding these types of phrases for English-learners. 
 
 ***
